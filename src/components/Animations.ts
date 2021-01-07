@@ -1,4 +1,4 @@
-export function numberAnimation(ref, value) {
+export function numberAnimation(ref: any, value: number) {
    for (let i = 0; i < ref.current.children.length; i++) {
       ref.current.children[i].animate(
          [{ transform: `translateY(${value}%)` }],
@@ -11,7 +11,7 @@ export function numberAnimation(ref, value) {
    }
 }
 
-export function backgroundAnimation(ref, value) {
+export function backgroundAnimation(ref: any, value: number) {
    for (let i = 0; i < ref.current.children.length; i++) {
       ref.current.children[i].animate(
          [
@@ -28,7 +28,7 @@ export function backgroundAnimation(ref, value) {
    }
 }
 
-export function subtitleAnimation(ref, value) {
+export function subtitleAnimation(ref: any, value: number) {
    for (let i = 0; i < ref.current.children.length; i++) {
       ref.current.children[i].animate(
          [
@@ -49,7 +49,7 @@ export function subtitleAnimation(ref, value) {
    }
 }
 
-export function firstTitleAnimation(ref, value) {
+export function firstTitleAnimation(ref: any, value: number) {
    for (let i = 0; i < ref.current.children.length; i++) {
       ref.current.children[i].animate(
          [
@@ -66,7 +66,7 @@ export function firstTitleAnimation(ref, value) {
    }
 }
 
-export function secondTitleAnimation(ref, value) {
+export function secondTitleAnimation(ref: any, value: number) {
    for (let i = 0; i < ref.current.children.length; i++) {
       ref.current.children[i].animate(
          [
@@ -84,7 +84,7 @@ export function secondTitleAnimation(ref, value) {
    }
 }
 
-export function descriptionAnimation(ref, value) {
+export function descriptionAnimation(ref: any, value: number) {
    for (let i = 0; i < ref.current.children.length; i++) {
       ref.current.children[i].animate(
          [
@@ -105,14 +105,14 @@ export function descriptionAnimation(ref, value) {
    }
 }
 
-export function sidebarAnimation(ref, indexNumber) {
+export function sidebarAnimation(ref: any, index: number) {
    for (let i = 0; i < ref.current.children.length; i++) {
       ref.current.children[i].className = "dots";
-      ref.current.children[indexNumber].className = "dots active";
+      ref.current.children[index].className = "dots active";
    }
 }
 
-export function backgroundSlide(ref, index, value) {
+export function backgroundSlide(ref: any, index: number, value: number) {
    ref.current.children[index].animate(
       [
          {
@@ -123,7 +123,7 @@ export function backgroundSlide(ref, index, value) {
    );
 }
 
-export function blogPostClosingAnimation(ref) {
+export function blogPostClosingAnimation(ref: any) {
    ref.current.animate(
       [
          {
