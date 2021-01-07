@@ -1,0 +1,19 @@
+#share {
+   position: fixed;
+   bottom: 30px;
+   right: 60px;
+   display: flex;
+   align-items: center;
+   p {
+      font-family: Montserrat;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 30px;
+      user-select: none;
+   }
+   img {
+      width: 20px;
+      height: 20px;
+   }
+}

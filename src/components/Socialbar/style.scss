@@ -1,0 +1,36 @@
+.social-container {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   left: 80px;
+   bottom: 15px;
+   p {
+      height: 20px;
+      font-family: Montserrat;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      transform: rotate(-90deg);
+      transform-origin: 0% 0%;
+      margin-bottom: 60px;
+      user-select: none;
+   }
+   p::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: #fff;
+      transform: translateX(-130%);
+   }
+   img {
+      width: 20px;
+      height: 20px;
+      margin: 15px 0;
+      cursor: pointer;
+   }
+}

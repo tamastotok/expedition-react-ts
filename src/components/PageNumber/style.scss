@@ -1,0 +1,17 @@
+#number-container {
+   position: absolute;
+   top: 60px;
+   left: 40px;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   height: 204px;
+   h1 {
+      font-family: MuktaMalar;
+      font-size: 12.8rem;
+      line-height: 1;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #fff;
+   }
+}

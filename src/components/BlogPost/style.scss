@@ -1,0 +1,187 @@
+::-webkit-scrollbar {
+   width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #b7b7b7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #f26748;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #bf2e0d;
+}
+
+.iframe-container {
+   width: 80%;
+   height: calc(100vh - 60px);
+   background-color: transparent;
+   display: flex;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 5;
+}
+
+.left-side-container,
+.iframe-background-container {
+   width: 50%;
+}
+
+.left-side {
+   width: 0%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   background-color: white;
+   animation-name: slideIn;
+   animation-duration: 1.5s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+
+.iframe-background {
+   width: 0;
+   height: 100%;
+   object-fit: cover;
+   animation-name: slideIn;
+   animation-duration: 1.2s;
+   animation-delay: 0.3s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+   to {
+      width: 100%;
+   }
+}
+
+.left-side header {
+   width: calc(100% - 80px);
+   display: flex;
+   justify-content: flex-start;
+   position: absolute;
+   top: 40px;
+   z-index: 3;
+   animation-name: fromHide;
+   animation-duration: 1s;
+   animation-delay: 0.8s;
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
+   opacity: 0;
+   background-color: transparent;
+   img {
+      width: 40px;
+      height: 40px;
+   }
+}
+
+@keyframes fromHide {
+   to {
+      opacity: 1;
+   }
+}
+
+.left-side header::after {
+   content: "";
+   width: 100%;
+   border-bottom: 2px solid #434343;
+   position: absolute;
+   bottom: -30px;
+   left: 0;
+}
+
+.iframe-author {
+   align-self: center;
+   margin-left: 20px;
+   p {
+      font-family: MontSerrat;
+      font-size: 11px;
+      font-weight: 200;
+      color: #434343;
+   }
+}
+
+#back-button {
+   font-family: MontSerrat;
+   font-size: 14px;
+   position: absolute;
+   right: 0;
+   align-self: center;
+   background-color: transparent;
+   border: none;
+   outline: none;
+   color: #434343;
+   cursor: pointer;
+}
+#back-button:hover {
+   color: #3e428e;
+}
+
+.top {
+   width: calc(100% - 40px);
+   height: 128px;
+   background-color: white;
+   position: absolute;
+   z-index: 2;
+}
+
+.iframe-text-container {
+   z-index: 1;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   width: 100%;
+   height: 100vh;
+   padding: 140px 40px 40px 40px;
+   position: relative;
+   h1 {
+      width: 100%;
+      font-family: CrimsonText;
+      font-size: 56px;
+      text-align: center;
+      color: #252750;
+      margin-bottom: 40px;
+      animation-name: fromHideToSlide;
+      animation-duration: 1s;
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+   }
+   p {
+      width: 100%;
+      font-family: CrimsonText;
+      font-size: 24px;
+      color: #434343;
+      margin-bottom: 40px;
+      animation-name: fromHideToSlide;
+      animation-duration: 1s;
+      animation-delay: 1.4s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+   }
+   img {
+      width: 100%;
+      height: 25vw;
+      margin-bottom: 40px;
+      object-fit: cover;
+      animation-name: fromHide;
+      animation-duration: 1s;
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+   }
+}
+
+@keyframes fromHideToSlide {
+   to {
+      opacity: 1;
+   }
+}

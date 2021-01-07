@@ -1,0 +1,67 @@
+#text-content {
+   position: absolute;
+   right: 120px;
+   top: 200px;
+   width: fit-content;
+   max-width: 780px;
+   height: fit-content;
+
+   #subtitle {
+      overflow: hidden;
+      height: 19px;
+      h2 {
+         font-family: Montserrat;
+         font-size: 1rem;
+         text-transform: uppercase;
+      }
+   }
+
+   #title {
+      div {
+         overflow: hidden;
+         height: 133px;
+      }
+      #second-row {
+         overflow-y: hidden;
+         margin-bottom: 20px;
+      }
+      h1 {
+         font-family: CrimsonText;
+         color: white;
+         font-size: 6rem;
+         font-weight: 400;
+      }
+   }
+
+   #description {
+      overflow: hidden;
+      height: 105px;
+      text-overflow: ellipsis;
+      width: 740px;
+      p {
+         width: 740px;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         display: -webkit-box;
+         -webkit-line-clamp: 3;
+         -webkit-box-orient: vertical;
+         font-family: CrimsonText;
+         font-size: 1.6rem;
+      }
+   }
+   button {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      font-family: CrimsonText;
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 400;
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+   }
+   button:hover {
+      color: #3e428e;
+   }
+}

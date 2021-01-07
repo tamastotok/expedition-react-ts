@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "blog": {
+      "author": "Annie Spratt",
+      "title": "Fauna of the Faroe Islands",
+      "article": "The bird fauna of the Faroes is dominated by seabirds and birds attracted to open land like heather, probably due to the lack of woodland and other suited habitats. There are special Faroese races of eider, starling, wren, guillemot, and black guillemot.[1] Puffins (Fratercula arctica), razorbills (Alca torda), and guillemots (Uria aalge), are very common seabirds in Faroe. Gannets (Sula sula) are common around the islands, but only breed on Mykines. Black guillemots (Cepphus grylle), eiders (Somateria mollissima) and shag (Phalacrocorax aristotelis) are common around the coast and the fulmars (Fulmarus glacialis) which immigrated to the islands in the 19th century have a steadily growing population. There are six species of seagulls (Larus) and the storm petrel (Hydrobates pelagicus) colony on Nólsoy is the largest in the world."
+    },
+    "landingPage":{
+      "subtitle": "TRAVEL OF THE WEEK",
+      "firstTitle": "Raw Beauty",
+      "secondTitle": "Faroe Islands.",
+      "description": "The Faroe  Islands - a North Atlantic archipelago located 200 miles (320 km) north-northwest of the United Kingdom and about halfway between Norway and Iceland…"
+    }
+  },
+  {
+    "id": 2,
+    "blog":{
+      "author": "Maija Kovari",
+      "title": "Journey of the Opal Ship",
+      "article": "I am not one for sitting still, unless it involves watching football or going for a pint. But for the last two hours, there's been little to lift my eyes from my screen and A Confederacy of Dunces; save for a small bunch of islands (the Shetlands), it's been sea, sea and more sea since we took off from Copenhagen. Then, ten minutes before landing, distraction arrives in visual form, with the Faroe Islands appearing as if from nowhere; a gnarled cluster of stone, grass and snow-peaked mountains in the middle of the ocean between Scotland and Iceland. It's like New Zealand if it lost the backpackers but kept the sheep, hundreds of them marauding across the hills like tiny flecks of snow. This unique archipelago forms an autonomous country within the Kingdom of Denmark, with a population of around 50,000. The mountains grow bigger as we approach Vágar Airport, the hillsides shine green and yellow in the late-evening sun, the sheep take fluffy, flocculent form. Tiny villages appear here and there, each little more than a few houses, a church and a football field. The vast expanse is eerily beautiful, not least because of an almost complete lack of trees which accentuates the stark landscape. Once on the ground, I pick up my hire car and take the coastal road towards the capital, Torshavn, thankful that this northerly part of the world enjoys late sunshine in spring: I'm already late for dinner and the drive takes an hour. Despite this – and the fact that I've not driven in six years – I'm relaxed as I make my way towards the Faroese capital. Sheep trot along the hillsides, and the towns I saw from the skies come and go as charming, pretty intervals along the way."
+    },
+    "landingPage":{
+      "subitle": "GRØNLAND",
+      "firstTitle": "Wild North",
+      "secondTitle": "Expedition",
+      "description": "Greenland is an autonomous constituent country of the Kingdom of Denmark between the Arctic and Atlantic Oceans, east of the Canadian Arctic Archipelago…"
+    }
+  },
+  {
+    "id": 3,
+    "blog":{
+      "author": "Michael Held",
+      "title": "The voices of Harpa",
+      "article": "The Icelandic Opera was formally founded October 3rd 1980 by a group of young singers and artists. For nearly thirty years, the company resided in an old theater downtown Reykjavík and moved to Harpa Concert Hall 2011 where the company is one of the main residents. Each season, The Icelandic Opera produces a versatile programme featuring Icelandic talents and regularly invites international guest artists. In its forty year history The Icelandic Opera has staged high quality productions ranging from Mozart and Verdi to new works by Icelandic composers. The company regularly hosts concerts with some of Iceland's best known singers as well as emerging new talents. The Icelandic Opera regularly participates in co-productions with local and international Festivals and Opera companies. Many of Iceland's finest singers have made their debut with The Icelandic Opera later to become well known in the international world of opera."
+    },
+    "landingPage":{
+      "subtitle": "REYKJAVIK",
+      "firstTitle": "Iceland's",
+      "secondTitle": "Viking Heritage",
+      "description": "Iceland is a Nordic island country in the North Atlantic, with a population of 360,390 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe. The capital and …"
+    }
+  }
+]
