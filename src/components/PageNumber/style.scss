@@ -15,3 +15,13 @@
       -webkit-text-stroke-color: #fff;
    }
 }
+
+@media (max-width: 760px) {
+   #number-container {
+      left: 20px;
+      height: 96px;
+      h1 {
+         font-size: 6rem;
+      }
+   }
+}

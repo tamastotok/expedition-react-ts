@@ -5,6 +5,7 @@
    bottom: 0;
    margin: auto;
    height: fit-content;
+   max-height: 134px;
 }
 
 .dots {
@@ -57,4 +58,17 @@
    right: 0;
    margin: auto;
    opacity: 1;
+}
+
+@media (max-width: 760px) {
+   #sidebar {
+      right: 20px;
+   }
+}
+
+@media (max-width: 480px) {
+   #sidebar {
+      top: 60px;
+      bottom: initial;
+   }
 }

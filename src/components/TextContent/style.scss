@@ -65,3 +65,60 @@
       color: #3e428e;
    }
 }
+
+@media (max-width: 1160px) {
+   #text-content {
+      max-width: 520px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      #title {
+         div {
+            height: 110px;
+         }
+         h1 {
+            font-size: 5rem;
+         }
+      }
+      #description {
+         width: 480px;
+         height: 79px;
+         p {
+            width: 480px;
+            font-size: 1.2rem;
+         }
+      }
+      button {
+         font-size: 1.4rem;
+      }
+   }
+}
+
+@media (max-width: 760px) {
+   #text-content {
+      max-width: 420px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      #title {
+         div {
+            height: 66px;
+         }
+         h1 {
+            font-size: 3rem;
+         }
+      }
+      #description {
+         width: 380px;
+         height: 79px;
+         p {
+            width: 380px;
+            font-size: 1.2rem;
+         }
+      }
+      button {
+         font-size: 1.4rem;
+         margin-top: 20px;
+      }
+   }
+}

@@ -26,3 +26,49 @@ header {
 #burger {
    position: absolute;
 }
+
+@media (max-width: 1160px) {
+   header {
+      justify-content: flex-end;
+      img {
+         position: absolute;
+         left: 60px;
+      }
+      nav ul a {
+         font-size: 0.8rem;
+         margin: 0 15px;
+      }
+      nav ul a:first-child {
+         margin-left: 0 !important;
+      }
+      nav ul a:last-child {
+         margin-right: 0 !important;
+      }
+   }
+}
+
+@media (max-width: 760px) {
+   header {
+      padding: 0;
+      img {
+         left: 20px;
+      }
+      nav {
+         display: none;
+      }
+   }
+   #burger {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      div {
+         width: 25px;
+         height: 3px;
+         background-color: white;
+         margin: 5px 0;
+         transition: all 0.3s ease;
+      }
+   }
+}
