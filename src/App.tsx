@@ -18,7 +18,7 @@ import {
    backgroundSlide,
 } from "./components/Animations";
 
-//! NOT DESIGNED UNDER width: 1160px
+//! NOT DESIGNED UNDER (max-width: 540px)
 
 function App() {
    const [deltaY, setDeltaY] = useState(0);
@@ -29,7 +29,7 @@ function App() {
    const handleWheel = (e: any) => {
       if (isDisabled.current) {
          setDeltaY(e.deltaY);
-         if (e.deltaY === -100) {
+         if (e.deltaY === -100 || e.deltaY === -3) {
             // Wheel Up
             setIndex((prev) => (prev === 0 ? prev : prev - 1));
             setTransformValue((prev) => (prev !== 0 ? prev + 100 : 0));
@@ -75,6 +75,7 @@ function App() {
             isDisabled.current = true;
          }, 1200);
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [index]);
 
    const [isHide, setIsHide] = useState(true);
@@ -94,7 +95,10 @@ function App() {
    };
 
    return (
-      <div className="App" onWheel={(e: React.WheelEvent) => handleWheel(e)}>
+      <div
+         className="App"
+         onWheel={(e: React.WheelEvent | React.TouchEvent) => handleWheel(e)}
+      >
          <Navbar />
          <Backgrounds backgroundRef={backgroundRef} />
          <PageNumber numberRef={numberRef} />
