@@ -4,7 +4,7 @@ import Backgrounds from "./components/Background";
 import PageNumber from "./components/PageNumber";
 import TextContent from "./components/TextContent";
 import BlogPost from "./components/BlogPost";
-import Sidebar from "./components/Sidebar";
+
 import Socialbar from "./components/Socialbar";
 import Share from "./components/Share";
 import {
@@ -14,11 +14,12 @@ import {
    firstTitleAnimation,
    secondTitleAnimation,
    descriptionAnimation,
-   sidebarAnimation,
    backgroundSlide,
 } from "./components/Animations";
 
 //! NOT DESIGNED UNDER (max-width: 540px)
+
+//TODO   up/down button for scrollevent
 
 function App() {
    const [deltaY, setDeltaY] = useState(0);
@@ -29,7 +30,8 @@ function App() {
    const handleWheel = (e: any) => {
       if (isDisabled.current) {
          setDeltaY(e.deltaY);
-         if (e.deltaY === -100 || e.deltaY === -3) {
+
+         if (e.deltaY < 0) {
             // Wheel Up
             setIndex((prev) => (prev === 0 ? prev : prev - 1));
             setTransformValue((prev) => (prev !== 0 ? prev + 100 : 0));
@@ -57,19 +59,15 @@ function App() {
       descriptionRef,
    } = textContentRefs;
 
-   const sidebarRef = useRef<HTMLDivElement | any>();
-
    useEffect(() => {
       if (deltaY !== 0) {
          isDisabled.current = false;
-
          numberAnimation(numberRef, transformValue);
          backgroundAnimation(backgroundRef, transformValue);
          subtitleAnimation(subtitleRef, transformValue);
          firstTitleAnimation(firsTitleRef, transformValue);
          secondTitleAnimation(secondTitleRef, transformValue);
          descriptionAnimation(descriptionRef, transformValue);
-         sidebarAnimation(sidebarRef, index);
 
          setTimeout(() => {
             isDisabled.current = true;
@@ -109,7 +107,7 @@ function App() {
          {!isHide ? (
             <BlogPost index={index} hideBlogPost={hideBlogPost} />
          ) : null}
-         <Sidebar sidebarRef={sidebarRef} />
+
          <Socialbar />
          <Share />
       </div>

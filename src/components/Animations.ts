@@ -105,13 +105,6 @@ export function descriptionAnimation(ref: any, value: number) {
    }
 }
 
-export function sidebarAnimation(ref: any, index: number) {
-   for (let i = 0; i < ref.current.children.length; i++) {
-      ref.current.children[i].className = "dots";
-      ref.current.children[index].className = "dots active";
-   }
-}
-
 export function backgroundSlide(ref: any, index: number, value: number) {
    ref.current.children[index].animate(
       [
