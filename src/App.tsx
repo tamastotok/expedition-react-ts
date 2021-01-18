@@ -19,8 +19,6 @@ import {
 
 //! NOT DESIGNED UNDER (max-width: 540px)
 
-//TODO   up/down button for scrollevent
-
 function App() {
    const [deltaY, setDeltaY] = useState(0);
    const [index, setIndex] = useState(0);
@@ -60,7 +58,7 @@ function App() {
    } = textContentRefs;
 
    useEffect(() => {
-      if (deltaY !== 0) {
+      if (deltaY !== 0 || buttonIsClicked) {
          isDisabled.current = false;
          numberAnimation(numberRef, transformValue);
          backgroundAnimation(backgroundRef, transformValue);
@@ -71,11 +69,13 @@ function App() {
 
          setTimeout(() => {
             isDisabled.current = true;
+            setButtonIsClicked(false);
          }, 1200);
       }
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [index]);
 
+   // Hide and Show blogpost when "read more" is clicked
    const [isHide, setIsHide] = useState(true);
 
    const showBlogPost = () => {
@@ -93,6 +93,26 @@ function App() {
          isDisabled.current = true;
       }, 1500);
    };
+   // -----
+
+   // Scroll function when buttons are clicked
+   const [buttonIsClicked, setButtonIsClicked] = useState(false);
+   const scrollUp = () => {
+      if (isDisabled.current) {
+         setButtonIsClicked(true);
+         setIndex((prev) => (prev === 0 ? prev : prev - 1));
+         setTransformValue((prev) => (prev !== 0 ? prev + 100 : 0));
+      }
+   };
+
+   const scrollDown = () => {
+      if (isDisabled.current) {
+         setButtonIsClicked(true);
+         setIndex((prev) => (prev === 2 ? prev : prev + 1));
+         setTransformValue((prev) => (prev !== -200 ? prev - 100 : -100));
+      }
+   };
+   // -----
 
    return (
       <div
@@ -111,6 +131,16 @@ function App() {
          ) : null}
 
          <Socialbar />
+         <div id="button-container">
+            <button id="scrollup-button" onClick={scrollUp}>
+               <div className="arrows"></div>
+               <div className="arrows"></div>
+            </button>
+            <button id="scrolldown-button" onClick={scrollDown}>
+               <div className="arrows"></div>
+               <div className="arrows"></div>
+            </button>
+         </div>
          <Share />
       </div>
    );
