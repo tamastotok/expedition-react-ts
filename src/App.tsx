@@ -79,9 +79,11 @@ function App() {
    const [isHide, setIsHide] = useState(true);
 
    const showBlogPost = () => {
-      isDisabled.current = false;
-      setIsHide(false);
-      backgroundSlide(backgroundRef, index, -15);
+      if (isDisabled.current) {
+         isDisabled.current = false;
+         setIsHide(false);
+         backgroundSlide(backgroundRef, index, -15);
+      } else return false;
    };
 
    const hideBlogPost = () => {
