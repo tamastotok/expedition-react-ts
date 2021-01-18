@@ -78,3 +78,60 @@ a {
 a:hover {
    color: $accent-color;
 }
+
+#button-container {
+   display: flex;
+   flex-direction: column;
+   float: right;
+   margin-top: 30px;
+   margin-right: 30px;
+   button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 2px solid white;
+      margin: 10px 0;
+      outline: none;
+      position: relative;
+   }
+   button:hover {
+      border-color: $accent-color;
+   }
+   button:hover .arrows {
+      background-color: $accent-color;
+   }
+}
+
+#scrollup-button {
+   div:first-child {
+      left: 34%;
+      top: 25%;
+      transform: rotate(45deg);
+   }
+   div:last-child {
+      right: 34%;
+      top: 25%;
+      transform: rotate(-45deg);
+   }
+}
+
+#scrolldown-button {
+   div:first-child {
+      left: 34%;
+      bottom: 25%;
+      transform: rotate(-45deg);
+   }
+   div:last-child {
+      right: 34%;
+      bottom: 25%;
+      transform: rotate(45deg);
+   }
+}
+
+.arrows {
+   width: 2px;
+   height: 15px;
+   background-color: $primary-color;
+   position: absolute;
+}
