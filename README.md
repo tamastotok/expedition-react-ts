@@ -2,7 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Design is from [instagram](https://www.instagram.com/p/B8n4ha1AeCw/?utm_source=ig_web_copy_link).
+Design from [here](https://www.instagram.com/p/B8n4ha1AeCw/?utm_source=ig_web_copy_link).
+
+## Usage:
+
+```
+git clone "repository url"
+cd "repository folder"
+npm i
+npm start
+```
 
 ## Animations:
 
