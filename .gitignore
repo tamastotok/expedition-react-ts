@@ -19,6 +19,7 @@
 .env.production.local
 
 .eslintcache
+/design
 
 npm-debug.log*
 yarn-debug.log*
