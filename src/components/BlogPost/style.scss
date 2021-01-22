@@ -198,3 +198,12 @@
       }
    }
 }
+
+@media (max-width: 680px) {
+   .left-side-container {
+      width: 100%;
+   }
+   .iframe-background-container {
+      display: none;
+   }
+}
