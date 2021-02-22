@@ -17,6 +17,9 @@ import {
    backgroundSlide,
 } from "./components/Animations";
 
+import next from "./img/icons/next.png";
+import back from "./img/icons/back.png";
+
 //! NOT DESIGNED UNDER (max-width: 540px)
 
 function App() {
@@ -133,12 +136,10 @@ function App() {
          <Socialbar />
          <div id="button-container">
             <button id="scrollup-button" onClick={scrollUp}>
-               <div className="arrows"></div>
-               <div className="arrows"></div>
+               <img src={back} alt="back-button" />
             </button>
             <button id="scrolldown-button" onClick={scrollDown}>
-               <div className="arrows"></div>
-               <div className="arrows"></div>
+               <img src={next} alt="next-button" />
             </button>
          </div>
          <Share />
