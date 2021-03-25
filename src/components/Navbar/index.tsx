@@ -1,13 +1,10 @@
-import React from "react";
 import logo from "./../../img/icons/logo.png";
 import "./style.scss";
 
 export default function Navbar() {
-   const handleClick = () => {};
-
    return (
       <header>
-         <div onClick={(e: React.MouseEvent) => handleClick} id="burger">
+         <div id="burger">
             <div className="line1"></div>
             <div className="line2"></div>
             <div className="line3"></div>

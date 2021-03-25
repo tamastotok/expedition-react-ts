@@ -1,4 +1,3 @@
-import React from "react";
 import share from "./../../img/icons/share.png";
 import "./style.scss";
 

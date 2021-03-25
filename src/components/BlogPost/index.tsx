@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import author from "./../../img/icons/author.svg";
 import data from "./../../data.json";
 import faroe_article_bg from "./../../img/page-1/faroe_article_bg.jpg";
@@ -7,11 +7,11 @@ import ship_article_bg from "./../../img/page-2/ship_article_bg.jpg";
 import ship_hero_img from "./../../img/page-2/ship_hero_img.jpg";
 import reyk_article_bg from "./../../img/page-3/reyk_article_bg.jpg";
 import reyk_hero_img from "./../../img/page-3/reyk_hero_img.jpg";
-import { blogPostClosingAnimation } from "../Animations";
+import { blogPostClosingAnimation } from "../../animations";
 import "./style.scss";
 
 export default function BlogPost({ hideBlogPost, index }: any) {
-   const blogPostRef = useRef<HTMLDivElement | any>();
+   const blogPostRef = useRef<HTMLDivElement | any>(null);
    const heroImages = [faroe_hero_img, ship_hero_img, reyk_hero_img];
    const backgroundImages = [
       faroe_article_bg,

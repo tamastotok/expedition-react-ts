@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Backgrounds from "./components/Background";
 import PageNumber from "./components/PageNumber";
 import TextContent from "./components/TextContent";
 import BlogPost from "./components/BlogPost";
-
 import Socialbar from "./components/Socialbar";
 import Share from "./components/Share";
 import {
@@ -15,23 +14,22 @@ import {
    secondTitleAnimation,
    descriptionAnimation,
    backgroundSlide,
-} from "./components/Animations";
+} from "./animations";
 
 import next from "./img/icons/next.png";
 import back from "./img/icons/back.png";
 
-//! NOT DESIGNED UNDER (max-width: 540px)
-
 function App() {
-   const [deltaY, setDeltaY] = useState(0);
-   const [index, setIndex] = useState(0);
-   const [transformValue, setTransformValue] = useState(0);
+   const [deltaY, setDeltaY] = useState<number>(0);
+   const [index, setIndex] = useState<number>(0);
+   const [transformValue, setTransformValue] = useState<number>(0);
    const isDisabled = useRef<boolean>(true);
 
    const handleWheel = (e: any) => {
       if (isDisabled.current) {
          setDeltaY(e.deltaY);
 
+         // Set up parameters for animations
          if (e.deltaY < 0) {
             // Wheel Up
             setIndex((prev) => (prev === 0 ? prev : prev - 1));
@@ -44,14 +42,14 @@ function App() {
       }
    };
 
-   const numberRef = useRef<HTMLDivElement | any>();
-   const backgroundRef = useRef<HTMLDivElement | any>();
+   const numberRef = useRef<HTMLDivElement>(null);
+   const backgroundRef = useRef<HTMLDivElement>(null);
 
    const textContentRefs = {
-      subtitleRef: useRef<HTMLDivElement | any>(),
-      firsTitleRef: useRef<HTMLDivElement | any>(),
-      secondTitleRef: useRef<HTMLDivElement | any>(),
-      descriptionRef: useRef<HTMLDivElement | any>(),
+      subtitleRef: useRef<HTMLDivElement>(null),
+      firsTitleRef: useRef<HTMLDivElement>(null),
+      secondTitleRef: useRef<HTMLDivElement>(null),
+      descriptionRef: useRef<HTMLDivElement>(null),
    };
    const {
       subtitleRef,
@@ -60,6 +58,7 @@ function App() {
       descriptionRef,
    } = textContentRefs;
 
+   // Trigger animations with wheel event
    useEffect(() => {
       if (deltaY !== 0 || buttonIsClicked) {
          isDisabled.current = false;
@@ -79,7 +78,7 @@ function App() {
    }, [index]);
 
    // Hide and Show blogpost when "read more" is clicked
-   const [isHide, setIsHide] = useState(true);
+   const [isHide, setIsHide] = useState<boolean>(true);
 
    const showBlogPost = () => {
       if (isDisabled.current) {
@@ -98,8 +97,8 @@ function App() {
    };
    // -----
 
-   // Scroll function when buttons are clicked
-   const [buttonIsClicked, setButtonIsClicked] = useState(false);
+   // Scroll function when left-arrow and right-arrow buttons are clicked
+   const [buttonIsClicked, setButtonIsClicked] = useState<boolean>(false);
    const scrollUp = () => {
       if (isDisabled.current) {
          setButtonIsClicked(true);
