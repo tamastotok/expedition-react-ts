@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Design from [here](https://www.instagram.com/p/B8n4ha1AeCw/?utm_source=ig_web_copy_link).
 
-## Deployed version can be found [here](https://expedition-to-north.herokuapp.com).
+## Deployed version can be found [here](https://expedition-8e46a.web.app).
 
 ## Usage:
 
@@ -28,9 +28,9 @@ Close button:\
 
 Tested on Windows:
 
--  Opera
--  Chrome
--  Firefox
--  Edge
+- Opera
+- Chrome
+- Firefox
+- Edge
 
 Not tested on IOS or any mobil device.

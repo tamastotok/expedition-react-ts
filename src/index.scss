@@ -1,47 +1,47 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-   font-size: 16px;
-   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-      "Helvetica Neue", sans-serif;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-   width: 100%;
-   height: 100vh;
-   overflow: hidden;
-   color: #fff;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
 }
 
 .App {
-   width: 100%;
-   height: 100vh;
-   overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 code {
-   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 @font-face {
-   font-family: CrimsonText;
-   src: url("../src/font/CrimsonText-Regular.ttf");
+  font-family: CrimsonText;
+  src: url("../src/font/CrimsonText-Regular.ttf");
 }
 
 @font-face {
-   font-family: Montserrat;
-   src: url("../src/font/Montserrat-SemiBold.ttf");
+  font-family: Montserrat;
+  src: url("../src/font/Montserrat-SemiBold.ttf");
 }
 
 @font-face {
-   font-family: MuktaMalar;
-   src: url("../src/font/MuktaMalar-Bold.ttf");
+  font-family: MuktaMalar;
+  src: url("../src/font/MuktaMalar-Bold.ttf");
 }
 
 $primary-color: #fff;
@@ -49,55 +49,55 @@ $secondary-color: #434343;
 $accent-color: #3e428e;
 
 h5 {
-   font-size: 1.2rem;
-   color: white;
+  font-size: 1.2rem;
+  color: white;
 }
 
 p {
-   font-size: 1rem;
-   color: white;
+  font-size: 1rem;
+  color: white;
 }
 
 li {
-   list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-   font-family: Montserrat;
-   font-weight: 600;
-   color: white;
-   font-size: 1rem;
-   text-decoration: none;
+  font-family: Montserrat;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 a:hover {
-   color: $accent-color;
+  color: $accent-color;
 }
 
 #button-container {
-   width: 130px;
-   bottom: 20px;
-   left: 0;
-   right: 0;
-   margin: auto;
-   position: absolute;
-   button {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: transparent;
-      border: 2px solid white;
-      outline: none;
-      position: relative;
-      margin: 0 10px;
-      img {
-         height: 25px;
-         position: absolute;
-         left: 0;
-         right: 0;
-         top: 0;
-         bottom: 0;
-         margin: auto;
-      }
-   }
+  width: 130px;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+    position: relative;
+    margin: 0 10px;
+    img {
+      height: 25px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
 }
